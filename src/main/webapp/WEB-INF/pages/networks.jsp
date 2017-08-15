@@ -52,7 +52,7 @@
 <br/>
 <br/>
 
-<h1>Book List</h1>
+<h1>Network List</h1>
 
 <c:if test="${!empty listNetworks}">
     <table class="tg">
@@ -63,7 +63,7 @@
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
-        <c:forEach items="${listNetworks}" var="book">
+        <c:forEach items="${listNetworks}" var="network">
             <tr>
                 <td>${network.idNetwork}</td>
                 <td><a href="/networkdata/${network.idNetwork}" target="_blank">${network.nameNetwork}</a></td>
