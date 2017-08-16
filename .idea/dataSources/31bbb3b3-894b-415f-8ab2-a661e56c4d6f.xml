@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="vpt_db@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
     <root id="1"/>
     <schema id="2" parent="1" name="vpt_db">
       <Current>1</Current>
@@ -11,26 +11,90 @@
     <schema id="5" parent="1" name="performance_schema"/>
     <schema id="6" parent="1" name="books"/>
     <table id="7" parent="2" name="network"/>
-    <column id="8" parent="7" name="id_network">
+    <table id="8" parent="2" name="server"/>
+    <table id="9" parent="2" name="zone"/>
+    <column id="10" parent="7" name="id_network">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="9" parent="7" name="name_network">
+    <column id="11" parent="7" name="name_network">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="10" parent="7" name="city_network">
+    <column id="12" parent="7" name="city_network">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="11" parent="7" name="PRIMARY">
+    <key id="13" parent="7" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_network</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="14" parent="8" name="id_server">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="8" name="name_server">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="16" parent="8" name="address_server">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="17" parent="8" name="id_zone">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="18" parent="8" name="id_zone">
+      <ColNames>id_zone</ColNames>
+    </index>
+    <key id="19" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_server</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="20" parent="8" name="id_zone">
+      <ColNames>id_zone</ColNames>
+      <RefSchemaName>vpt_db</RefSchemaName>
+      <RefTableName>zone</RefTableName>
+      <RefColNames>id_zone</RefColNames>
+    </foreign-key>
+    <column id="21" parent="9" name="id_zone">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="9" name="name_zone">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="9" name="id_network">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="24" parent="9" name="id_network">
+      <ColNames>id_network</ColNames>
+    </index>
+    <key id="25" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_zone</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="26" parent="9" name="id_network">
+      <ColNames>id_network</ColNames>
+      <RefSchemaName>vpt_db</RefSchemaName>
+      <RefTableName>network</RefTableName>
+      <RefColNames>id_network</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
