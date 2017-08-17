@@ -16,29 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `zone`
+-- Table structure for table `network`
 --
 
-DROP TABLE IF EXISTS `zone`;
+DROP TABLE IF EXISTS `network`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `zone` (
-  `id_zone` int(11) NOT NULL AUTO_INCREMENT,
-  `name_zone` varchar(255) NOT NULL,
-  `id_network` int(11) NOT NULL,
-  PRIMARY KEY (`id_zone`),
-  KEY `id_network` (`id_network`),
-  CONSTRAINT `id_network` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)
+CREATE TABLE `network` (
+  `id_network` int(11) NOT NULL AUTO_INCREMENT,
+  `name_network` varchar(255) NOT NULL,
+  `city_network` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_network`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `zone`
+-- Dumping data for table `network`
 --
 
-LOCK TABLES `zone` WRITE;
-/*!40000 ALTER TABLE `zone` DISABLE KEYS */;
-/*!40000 ALTER TABLE `zone` ENABLE KEYS */;
+LOCK TABLES `network` WRITE;
+/*!40000 ALTER TABLE `network` DISABLE KEYS */;
+/*!40000 ALTER TABLE `network` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-16 23:25:49
+-- Dump completed on 2017-08-17 21:27:30

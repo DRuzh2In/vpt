@@ -16,27 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `network`
+-- Table structure for table `cross`
 --
 
-DROP TABLE IF EXISTS `network`;
+DROP TABLE IF EXISTS `cross`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `network` (
-  `id_network` int(11) NOT NULL AUTO_INCREMENT,
-  `name_network` varchar(255) NOT NULL,
-  `city_network` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_network`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+CREATE TABLE `cross` (
+  `id_cross` int(11) NOT NULL AUTO_INCREMENT,
+  `name_cross` varchar(10) NOT NULL DEFAULT 'ODF-',
+  `date_change` date NOT NULL,
+  `id_server` int(11) DEFAULT NULL,
+  `tc_name` varchar(10) NOT NULL DEFAULT 'TC-',
+  `free_mod` int(11) NOT NULL,
+  `count_mod` int(11) NOT NULL,
+  PRIMARY KEY (`id_cross`),
+  KEY `cross_server_id_server_fk` (`id_server`),
+  CONSTRAINT `cross_server_id_server_fk` FOREIGN KEY (`id_server`) REFERENCES `server` (`id_server`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `network`
+-- Dumping data for table `cross`
 --
 
-LOCK TABLES `network` WRITE;
-/*!40000 ALTER TABLE `network` DISABLE KEYS */;
-/*!40000 ALTER TABLE `network` ENABLE KEYS */;
+LOCK TABLES `cross` WRITE;
+/*!40000 ALTER TABLE `cross` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cross` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-16 23:25:49
+-- Dump completed on 2017-08-17 21:27:30

@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `server`
+-- Table structure for table `module`
 --
 
-DROP TABLE IF EXISTS `server`;
+DROP TABLE IF EXISTS `module`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `server` (
-  `id_server` int(11) NOT NULL AUTO_INCREMENT,
-  `name_server` varchar(255) DEFAULT NULL,
-  `address_server` varchar(255) DEFAULT NULL,
-  `id_zone` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_server`),
-  KEY `id_zone` (`id_zone`),
-  CONSTRAINT `id_zone` FOREIGN KEY (`id_zone`) REFERENCES `zone` (`id_zone`)
+CREATE TABLE `module` (
+  `id_module` int(11) NOT NULL AUTO_INCREMENT,
+  `count_port` int(11) NOT NULL,
+  `count_empty_port` int(11) NOT NULL,
+  `id_cross` int(11) NOT NULL,
+  PRIMARY KEY (`id_module`),
+  KEY `module_cross_id_cross_fk` (`id_cross`),
+  CONSTRAINT `module_cross_id_cross_fk` FOREIGN KEY (`id_cross`) REFERENCES `cross` (`id_cross`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `server`
+-- Dumping data for table `module`
 --
 
-LOCK TABLES `server` WRITE;
-/*!40000 ALTER TABLE `server` DISABLE KEYS */;
-/*!40000 ALTER TABLE `server` ENABLE KEYS */;
+LOCK TABLES `module` WRITE;
+/*!40000 ALTER TABLE `module` DISABLE KEYS */;
+/*!40000 ALTER TABLE `module` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-16 23:25:49
+-- Dump completed on 2017-08-17 21:27:31
