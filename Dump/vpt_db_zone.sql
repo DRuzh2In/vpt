@@ -28,7 +28,7 @@ CREATE TABLE `zone` (
   `id_network` int(11) NOT NULL,
   PRIMARY KEY (`id_zone`),
   KEY `zone_network_id_network_fk` (`id_network`),
-  CONSTRAINT `zone_network_id_network_fk` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)
+  CONSTRAINT `zone_network_id_network_fk` FOREIGN KEY (`id_network`) REFERENCES `zone` (`id_network`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

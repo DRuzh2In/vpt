@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `network`
+-- Table structure for table `zone`
 --
 
-DROP TABLE IF EXISTS `network`;
+DROP TABLE IF EXISTS `zone`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `network` (
+CREATE TABLE `zone` (
   `id_network` int(11) NOT NULL AUTO_INCREMENT,
   `name_network` varchar(255) NOT NULL,
   `city_network` varchar(255) NOT NULL,
@@ -31,12 +31,12 @@ CREATE TABLE `network` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `network`
+-- Dumping data for table `zone`
 --
 
-LOCK TABLES `network` WRITE;
-/*!40000 ALTER TABLE `network` DISABLE KEYS */;
-/*!40000 ALTER TABLE `network` ENABLE KEYS */;
+LOCK TABLES `zone` WRITE;
+/*!40000 ALTER TABLE `zone` DISABLE KEYS */;
+/*!40000 ALTER TABLE `zone` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

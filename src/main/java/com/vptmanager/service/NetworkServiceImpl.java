@@ -42,6 +42,7 @@ public class NetworkServiceImpl implements NetworkService{
 
     @Override
     @Transactional
-    public List<Network> listNetworks() { return this.networkDao.listNetworks();
+    public List<Network> listNetworks() {
+        return this.networkDao.listNetworks();
     }
 }

@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class NetworkController {
     private NetworkService networkService;
 
-    @Autowired(required = true)
+    @Autowired
     @Qualifier(value = "networkService")
-    public void setBookService(NetworkService networkService) {
+    public void setNetworkService(NetworkService networkService) {
         this.networkService = networkService;
     }
 
     @RequestMapping(value = "networks", method = RequestMethod.GET)
-    public String listBooks(Model model){
+    public String listNetworks(Model model){
         model.addAttribute("network", new Network());
         model.addAttribute("listNetworks", this.networkService.listNetworks());
 
@@ -41,14 +41,14 @@ public class NetworkController {
     }
 
     @RequestMapping("/remove/{idNetwork}")
-    public String removeBook(@PathVariable("idNetwork") int idNetwork){
+    public String removeZone(@PathVariable("idNetwork") int idNetwork){
         this.networkService.removeNetwork(idNetwork);
 
         return "redirect:/networks";
     }
 
     @RequestMapping("edit/{idNetwork}")
-    public String editBook(@PathVariable("idNetwork") int idNetwork, Model model){
+    public String editNetwork(@PathVariable("idNetwork") int idNetwork, Model model){
         model.addAttribute("network", this.networkService.getNetworkById(idNetwork));
         model.addAttribute("listNetworks", this.networkService.listNetworks());
 

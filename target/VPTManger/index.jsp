@@ -7,7 +7,8 @@
 <body>
     <h3>Network cross-connect</h3>
     <br/>
-    <a href="<c:url value="/networks"/>" target="_blank">Networks list</a>
+    <p><a href="<c:url value="/networks"/>" target="_blank">Networks list</a></p>
+    <p><a href="<c:url value="/zones"/>" target="_blank">Zones list</a></p>
     <br/>
 </body>
 </html>

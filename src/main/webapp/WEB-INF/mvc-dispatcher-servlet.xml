@@ -34,6 +34,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
+                <value>com.vptmanager.model.Zone</value>
                 <value>com.vptmanager.model.Network</value>
             </list>
         </property>
@@ -46,13 +47,22 @@
         </property>
     </bean>
 
-    <!--BookDao and BookService beans-->
+    <!--NetworkDao and NetworkService beans-->
     <bean id="networkDao" class="com.vptmanager.dao.NetworkDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
     <bean id="networkService" class="com.vptmanager.service.NetworkServiceImpl">
         <property name="networkDao" ref="networkDao"/>
+    </bean>
+
+    <!--ZoneDao and ZoneService beans-->
+    <bean id="zoneDao" class="com.vptmanager.dao.ZoneDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="zoneService" class="com.vptmanager.service.ZoneServiceImpl">
+        <property name="zoneDao" ref="zoneDao"/>
     </bean>
 
     <context:component-scan base-package="com.vptmanager"/>

@@ -1,5 +1,6 @@
 package com.vptmanager.model;
 
+//connect with data base
 import javax.persistence.*;
 
 @Entity
@@ -21,8 +22,8 @@ public class Network {
         return idNetwork;
     }
 
-    public void setIdNetwork(int id_network) {
-        this.idNetwork = id_network;
+    public void setIdNetwork(int idNetwork) {
+        this.idNetwork = idNetwork;
     }
 
     public String getNameNetwork() {
