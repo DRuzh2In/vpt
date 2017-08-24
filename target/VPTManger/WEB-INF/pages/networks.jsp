@@ -68,8 +68,8 @@
                 <td>${network.idNetwork}</td>
                 <td><a href="/networkdata/${network.idNetwork}" target="_blank">${network.nameNetwork}</a></td>
                 <td>${network.cityNetwork}</td>
-                <td><a href="<c:url value='/edit/${network.idNetwork}'/>">Edit</a></td>
-                <td><a href="<c:url value='/remove/${network.idNetwork}'/>">Delete</a></td>
+                <td><a href="<c:url value='/edit/network/${network.idNetwork}'/>">Edit</a></td>
+                <td><a href="<c:url value='/remove/network/${network.idNetwork}'/>">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

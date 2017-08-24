@@ -40,14 +40,14 @@ public class NetworkController {
         return "redirect:/networks";
     }
 
-    @RequestMapping("/remove/{idNetwork}")
+    @RequestMapping("/remove/network/{idNetwork}")
     public String removeZone(@PathVariable("idNetwork") int idNetwork){
         this.networkService.removeNetwork(idNetwork);
 
         return "redirect:/networks";
     }
 
-    @RequestMapping("edit/{idNetwork}")
+    @RequestMapping("edit/network/{idNetwork}")
     public String editNetwork(@PathVariable("idNetwork") int idNetwork, Model model){
         model.addAttribute("network", this.networkService.getNetworkById(idNetwork));
         model.addAttribute("listNetworks", this.networkService.listNetworks());

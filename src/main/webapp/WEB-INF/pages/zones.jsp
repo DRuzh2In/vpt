@@ -66,8 +66,8 @@
             <tr>
                 <td>${zone.idZone}</td>
                 <td><a href="/zonedata/${zone.idZone}" target="_blank">${zone.nameZone}</a></td>
-                <td><a href="<c:url value='/edit/${zone.idZone}'/>">Edit</a></td>
-                <td><a href="<c:url value='/remove/${zone.idZone}'/>">Delete</a></td>
+                <td><a href="<c:url value='/edit/zone/${zone.idZone}'/>">Edit</a></td>
+                <td><a href="<c:url value='/remove/zone/${zone.idZone}'/>">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

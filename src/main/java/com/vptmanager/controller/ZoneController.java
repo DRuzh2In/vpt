@@ -26,7 +26,7 @@ public class ZoneController {
         model.addAttribute("zone", new Zone());
         model.addAttribute("listZones", this.zoneService.listZones());
 
-        return "zone";
+        return "zones";
     }
 
     @RequestMapping(value = "/zones/add", method = RequestMethod.POST)
@@ -40,19 +40,19 @@ public class ZoneController {
         return "redirect:/zones";
     }
 
-    @RequestMapping("/remove/{idZone}")
+    @RequestMapping("/remove/zone/{idZone}")
     public String removeZone(@PathVariable("idZone") int idZone){
         this.zoneService.removeZone(idZone);
 
         return "redirect:/zones";
     }
 
-    @RequestMapping("edit/{idZone}")
+    @RequestMapping("edit/zone/{idZone}")
     public String editBook(@PathVariable("idZone") int idZone, Model model){
         model.addAttribute("zone", this.zoneService.getZoneById(idZone));
         model.addAttribute("listZones", this.zoneService.listZones());
 
-        return "zone";
+        return "zones";
     }
 
     @RequestMapping("zonedata/{idZone}")
