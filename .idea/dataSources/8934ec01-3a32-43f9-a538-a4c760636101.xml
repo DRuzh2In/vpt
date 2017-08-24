@@ -30,8 +30,9 @@
     </column>
     <column id="15" parent="6" name="date_change">
       <Position>3</Position>
-      <DataType>date|0</DataType>
+      <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos; __.__.__&apos;</DefaultExpression>
     </column>
     <column id="16" parent="6" name="tc_name">
       <Position>4</Position>
@@ -60,17 +61,17 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="21" parent="7" name="direct">
+    <column id="21" parent="7" name="direct_line">
       <Position>2</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="7" name="count_port">
+    <column id="22" parent="7" name="count_port_line">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="7" name="count_free_port">
+    <column id="23" parent="7" name="count_free_port_line">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -91,12 +92,12 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="27" parent="8" name="count_port">
+    <column id="27" parent="8" name="count_port_module">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="8" name="count_empty_port">
+    <column id="28" parent="8" name="count_empty_port_module">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -138,11 +139,11 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="10" name="stat_port">
+    <column id="36" parent="10" name="empty_port">
       <Position>3</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
     <column id="37" parent="10" name="id_next_port">
       <Position>4</Position>
