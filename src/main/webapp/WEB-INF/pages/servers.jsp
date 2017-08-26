@@ -5,7 +5,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title>Servers Page</title>
+    <title>Server Page</title>
 
     <style type="text/css">
         .tg {
@@ -108,7 +108,7 @@
         <tr>
             <td>
                 <form:label path="addressServer">
-                    <spring:message text="Addrss"/>
+                    <spring:message text="Address"/>
                 </form:label>
             </td>
             <td>

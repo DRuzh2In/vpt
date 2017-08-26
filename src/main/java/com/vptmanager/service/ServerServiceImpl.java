@@ -13,7 +13,7 @@ public class ServerServiceImpl implements ServerService {
 
     private ServerDao serverDao;
 
-    public void setServerDao(ServerDao networkDao) {
+    public void setServerDao(ServerDao serverDao) {
         this.serverDao = serverDao;
     }
 

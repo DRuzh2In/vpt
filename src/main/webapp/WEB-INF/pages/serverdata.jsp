@@ -6,7 +6,7 @@
 
 <html>
 <head>
-    <title>NetworkData</title>
+    <title>ServerData</title>
 
     <style type="text/css">
         .tg {
@@ -47,13 +47,13 @@
 
 </head>
 <body>
-<h1>Network Details</h1>
+<h1>Server Details</h1>
 
 <table class="tg">
     <tr>
         <th width="80">ID</th>
-        <th width="120">Network</th>
-        <th width="120">City</th>
+        <th width="120">Server</th>
+        <th width="120">Address</th>
     </tr>
     <tr>
         <td>${server.idServer}</td>
