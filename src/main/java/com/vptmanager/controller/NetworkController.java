@@ -41,7 +41,7 @@ public class NetworkController {
     }
 
     @RequestMapping("/remove/network/{idNetwork}")
-    public String removeZone(@PathVariable("idNetwork") int idNetwork){
+    public String removeNetwork(@PathVariable("idNetwork") int idNetwork){
         this.networkService.removeNetwork(idNetwork);
 
         return "redirect:/networks";

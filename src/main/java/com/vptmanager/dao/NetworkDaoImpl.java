@@ -60,7 +60,7 @@ public class NetworkDaoImpl implements NetworkDao {
         List<Network> networkList = session.createQuery("from Network").list();
 
         for(Network network: networkList){
-            logger.info("Book list: " + network);
+            logger.info("Network list: " + network);
         }
 
         return networkList;

@@ -48,7 +48,7 @@ public class ZoneController {
     }
 
     @RequestMapping("edit/zone/{idZone}")
-    public String editBook(@PathVariable("idZone") int idZone, Model model){
+    public String editZone(@PathVariable("idZone") int idZone, Model model){
         model.addAttribute("zone", this.zoneService.getZoneById(idZone));
         model.addAttribute("listZones", this.zoneService.listZones());
 
