@@ -49,14 +49,14 @@ public class ServerController {
 
     @RequestMapping("edit/server/{idServer}")
     public String editServer(@PathVariable("idServer") int idServer, Model model){
-        model.addAttribute("zone", this.serverService.getServerById(idServer));
+        model.addAttribute("server", this.serverService.getServerById(idServer));
         model.addAttribute("listServers", this.serverService.listServers());
 
         return "servers";
     }
 
     @RequestMapping("serverdata/{idServer}")
-    public String serverData(@PathVariable("idSeerver") int idServer, Model model){
+    public String serverData(@PathVariable("idServer") int idServer, Model model){
         model.addAttribute("server", this.serverService.getServerById(idServer));
 
         return "serverdata";
