@@ -29,8 +29,8 @@ public class NetworkController {
         return "networks";
     }
 
-    @RequestMapping(value = "/networks/add", method = RequestMethod.POST)
-    public String addNetworks(@ModelAttribute("network") Network network){
+    @RequestMapping(value = "/network/add", method = RequestMethod.POST)
+    public String addNetwork(@ModelAttribute("network") Network network){
         if(network.getIdNetwork() == 0){
             this.networkService.addNetwork(network);
         }else {

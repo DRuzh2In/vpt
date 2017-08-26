@@ -76,7 +76,7 @@
 
 <h1>Add a Zone</h1>
 
-<c:url var="addAction" value="/zones/add"/>
+<c:url var="addAction" value="/zone/add"/>
 
 <form:form action="${addAction}" commandName="zone">
     <table>

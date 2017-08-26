@@ -36,6 +36,7 @@
             <list>
                 <value>com.vptmanager.model.Network</value>
                 <value>com.vptmanager.model.Zone</value>
+                <value>com.vptmanager.model.Server</value>
             </list>
         </property>
         <property name="hibernateProperties">

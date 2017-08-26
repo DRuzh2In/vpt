@@ -78,7 +78,7 @@
 
 <h1>Add a Network</h1>
 
-<c:url var="addAction" value="/networks/add"/>
+<c:url var="addAction" value="/network/add"/>
 
 <form:form action="${addAction}" commandName="network">
     <table>

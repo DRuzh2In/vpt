@@ -17,7 +17,7 @@ public class ZoneController {
 
     @Autowired(required = true)
     @Qualifier(value = "zoneService")
-    public void setBookService(ZoneService zoneService) {
+    public void setZoneService(ZoneService zoneService) {
         this.zoneService = zoneService;
     }
 
@@ -29,8 +29,8 @@ public class ZoneController {
         return "zones";
     }
 
-    @RequestMapping(value = "/zones/add", method = RequestMethod.POST)
-    public String addZones(@ModelAttribute("zone") Zone zone){
+    @RequestMapping(value = "/zone/add", method = RequestMethod.POST)
+    public String addZone(@ModelAttribute("zone") Zone zone){
         if(zone.getIdZone() == 0){
             this.zoneService.addZone(zone);
         }else {
