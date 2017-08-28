@@ -3,7 +3,7 @@ package com.vptmanager.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cross")
+@Table(name = "odf")
 public class Cross {
 
     @Id
@@ -14,16 +14,16 @@ public class Cross {
     @Column(name = "name_cross")
     private String nameCross;
 
-    @Column(name = "data_change")
+    @Column(name = "date_change")
     private String dateChange;
 
     @Column(name = "tc_name")
     private String tcName;
 
-    @Column(name = "free_mode")
+    @Column(name = "free_mod")
     private int freeMod;
 
-    @Column(name = "count_mode")
+    @Column(name = "count_mod")
     private int countMod;
 
     public int getIdCross() {

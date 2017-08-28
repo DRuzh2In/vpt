@@ -54,7 +54,6 @@ public class ServerDaoImpl implements ServerDao {
     }
 
     @Override
-
     public List<Server> listServers() {
         Session session = this.sessionFactory.getCurrentSession();
         List<Server> serverList = session.createQuery("from Server").list();

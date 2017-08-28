@@ -54,7 +54,6 @@ public class ZoneDaoImpl implements ZoneDao {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public List<Zone> listZones() {
         Session session = this.sessionFactory.getCurrentSession();
         List<Zone> zoneList = session.createQuery("from Zone").list();

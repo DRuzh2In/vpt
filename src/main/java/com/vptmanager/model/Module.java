@@ -12,10 +12,10 @@ public class Module {
     private int idModule;
 
     @Column(name = "count_port_module")
-    private int count_port_module;
+    private int countPortModule;
 
     @Column(name = "count_empty_port_module")
-    private  int count_empty_port_module;
+    private  int countEmptyPortModule;
 
     public int getIdModule() {
         return idModule;
@@ -25,28 +25,28 @@ public class Module {
         this.idModule = idModule;
     }
 
-    public int getCount_port_module() {
-        return count_port_module;
+    public int getCountPortModule() {
+        return countPortModule;
     }
 
-    public void setCount_port_module(int count_port_module) {
-        this.count_port_module = count_port_module;
+    public void setCountPortModule(int countPortModule) {
+        this.countPortModule = countPortModule;
     }
 
-    public int getCount_empty_port_module() {
-        return count_empty_port_module;
+    public int getCountEmptyPortModule() {
+        return countEmptyPortModule;
     }
 
-    public void setCount_empty_port_module(int count_empty_port_module) {
-        this.count_empty_port_module = count_empty_port_module;
+    public void setCountEmptyPortModule(int countEmptyPortModule) {
+        this.countEmptyPortModule = countEmptyPortModule;
     }
 
     @Override
     public String toString() {
         return "Module{" +
                 "idModule=" + idModule +
-                ", count_port_module=" + count_port_module +
-                ", count_empty_port_module=" + count_empty_port_module +
+                ", countPortModule=" + countPortModule +
+                ", countEmptyPortModule=" + countEmptyPortModule +
                 '}';
     }
 }

@@ -37,6 +37,10 @@
                 <value>com.vptmanager.model.Network</value>
                 <value>com.vptmanager.model.Zone</value>
                 <value>com.vptmanager.model.Server</value>
+                <value>com.vptmanager.model.Cross</value>
+                <value>com.vptmanager.model.Module</value>
+                <value>com.vptmanager.model.Line</value>
+                <value>com.vptmanager.model.Port</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -73,6 +77,42 @@
 
     <bean id="serverService" class="com.vptmanager.service.ServerServiceImpl">
         <property name="serverDao" ref="serverDao"/>
+    </bean>
+
+    <!--CrossDao and CrossService beans-->
+    <bean id="crossDao" class="com.vptmanager.dao.CrossDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="crossService" class="com.vptmanager.service.CrossServiceImpl">
+        <property name="crossDao" ref="crossDao"/>
+    </bean>
+
+    <!--ModuleDao and ModuleService beans-->
+    <bean id="moduleDao" class="com.vptmanager.dao.ModuleDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="moduleService" class="com.vptmanager.service.ModuleServiceImpl">
+        <property name="moduleDao" ref="moduleDao"/>
+    </bean>
+
+    <!--LineDao and LineService beans-->
+    <bean id="lineDao" class="com.vptmanager.dao.LineDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="lineService" class="com.vptmanager.service.LineServiceImpl">
+        <property name="lineDao" ref="lineDao"/>
+    </bean>
+
+    <!--PortDao and PortService beans-->
+    <bean id="portDao" class="com.vptmanager.dao.PortDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="portService" class="com.vptmanager.service.PortServiceImpl">
+        <property name="portDao" ref="portDao"/>
     </bean>
 
     <context:component-scan base-package="com.vptmanager"/>

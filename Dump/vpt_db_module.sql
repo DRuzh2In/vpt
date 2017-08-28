@@ -19,7 +19,7 @@
 -- Table structure for table `module`
 --
 
-DROP TABLE IF EXISTS `module`;
+DROP TABLE IF EXISTS module;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `module` (
@@ -37,9 +37,9 @@ CREATE TABLE `module` (
 -- Dumping data for table `module`
 --
 
-LOCK TABLES `module` WRITE;
-/*!40000 ALTER TABLE `module` DISABLE KEYS */;
-/*!40000 ALTER TABLE `module` ENABLE KEYS */;
+LOCK TABLES module WRITE;
+/*!40000 ALTER TABLE module DISABLE KEYS */;
+/*!40000 ALTER TABLE module ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

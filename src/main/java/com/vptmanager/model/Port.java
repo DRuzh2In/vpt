@@ -83,11 +83,11 @@ public class Port {
         this.connect = connect;
     }
 
-    public String getServise() {
+    public String getService() {
         return service;
     }
 
-    public void setServise(String servise) {
+    public void setService(String servise) {
         this.service = servise;
     }
 

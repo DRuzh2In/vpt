@@ -54,7 +54,6 @@ public class NetworkDaoImpl implements NetworkDao {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public List<Network> listNetworks() {
         Session session = this.sessionFactory.getCurrentSession();
         List<Network> networkList = session.createQuery("from Network").list();
